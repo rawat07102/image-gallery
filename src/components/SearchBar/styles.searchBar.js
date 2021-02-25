@@ -2,14 +2,13 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles({
   root: {
-    margin: "auto",
-    height: "100px",
+    justifyContent: "center",
     maxWidth: "1280px",
-    width: "90vw",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    marginBottom: "16px",
+    margin: "16px auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, 200px)",
+    columnGap: "16px",
+    rowGap: "16px",
   },
   searchField: {
     position: "relative",

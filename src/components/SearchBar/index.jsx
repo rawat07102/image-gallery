@@ -3,7 +3,7 @@ import useStyles from "./styles.searchBar";
 
 const SearchBar = ({ query, handleChange }) => {
   const [focus, setFocus] = React.useState(false);
-  const classes = useStyles(focus);
+  const classes = useStyles(focus || !!query);
 
   return (
     <header className={classes.root}>

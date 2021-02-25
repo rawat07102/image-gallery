@@ -5,6 +5,8 @@ import PhotoCard from "../PhotoCard";
 
 const useStyles = makeStyles({
   root: {
+    justifyContent: "center",
+    width: "100%",
     maxWidth: "1280px",
     margin: "auto",
     display: "grid",
@@ -18,7 +20,29 @@ const PhotoGallery = ({ photos }) => {
   const classes = useStyles();
 
   if (!photos) {
-    return <div>loading...</div>;
+    return (
+      <div
+        style={{
+          maxWidth: "1280px",
+          margin: "auto",
+        }}
+      >
+        loading...
+      </div>
+    );
+  }
+
+  if (photos && photos.length === 0) {
+    return (
+      <div
+        style={{
+          maxWidth: "1280px",
+          margin: "auto",
+        }}
+      >
+        No Result.
+      </div>
+    );
   }
 
   return (
